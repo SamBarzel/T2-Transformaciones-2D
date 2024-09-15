@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Dibujar = new Panel();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            btnPoligono = new Button();
+            textBox6P = new TextBox();
+            textBox5P = new TextBox();
+            textBox4P = new TextBox();
+            textBox3P = new TextBox();
+            textBox2P = new TextBox();
+            textBox1P = new TextBox();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
@@ -46,15 +47,15 @@
             Transformaciones = new Panel();
             button4 = new Button();
             button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            btnEscalamiento = new Button();
+            btnTraslacion = new Button();
             textBox12 = new TextBox();
             comboBox1 = new ComboBox();
             textBox11 = new TextBox();
-            textBox10 = new TextBox();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
+            textBox10E = new TextBox();
+            textBox9E = new TextBox();
+            textBox8T = new TextBox();
+            textBox7T = new TextBox();
             label14 = new Label();
             label13 = new Label();
             label12 = new Label();
@@ -80,12 +81,13 @@
             // Dibujar
             // 
             Dibujar.BackgroundImage = (Image)resources.GetObject("Dibujar.BackgroundImage");
-            Dibujar.Controls.Add(textBox6);
-            Dibujar.Controls.Add(textBox5);
-            Dibujar.Controls.Add(textBox4);
-            Dibujar.Controls.Add(textBox3);
-            Dibujar.Controls.Add(textBox2);
-            Dibujar.Controls.Add(textBox1);
+            Dibujar.Controls.Add(btnPoligono);
+            Dibujar.Controls.Add(textBox6P);
+            Dibujar.Controls.Add(textBox5P);
+            Dibujar.Controls.Add(textBox4P);
+            Dibujar.Controls.Add(textBox3P);
+            Dibujar.Controls.Add(textBox2P);
+            Dibujar.Controls.Add(textBox1P);
             Dibujar.Controls.Add(label9);
             Dibujar.Controls.Add(label8);
             Dibujar.Controls.Add(label7);
@@ -98,47 +100,57 @@
             Dibujar.Size = new Size(157, 342);
             Dibujar.TabIndex = 0;
             // 
-            // textBox6
+            // btnPoligono
             // 
-            textBox6.Location = new Point(108, 273);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(32, 23);
-            textBox6.TabIndex = 12;
+            btnPoligono.Location = new Point(36, 302);
+            btnPoligono.Name = "btnPoligono";
+            btnPoligono.Size = new Size(75, 23);
+            btnPoligono.TabIndex = 13;
+            btnPoligono.Text = "Poligono";
+            btnPoligono.UseVisualStyleBackColor = true;
+            btnPoligono.Click += btnPoligono_Click;
             // 
-            // textBox5
+            // textBox6P
             // 
-            textBox5.Location = new Point(8, 273);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(34, 23);
-            textBox5.TabIndex = 11;
+            textBox6P.Location = new Point(108, 273);
+            textBox6P.Name = "textBox6P";
+            textBox6P.Size = new Size(32, 23);
+            textBox6P.TabIndex = 12;
             // 
-            // textBox4
+            // textBox5P
             // 
-            textBox4.Location = new Point(101, 172);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(39, 23);
-            textBox4.TabIndex = 10;
+            textBox5P.Location = new Point(8, 273);
+            textBox5P.Name = "textBox5P";
+            textBox5P.Size = new Size(34, 23);
+            textBox5P.TabIndex = 11;
             // 
-            // textBox3
+            // textBox4P
             // 
-            textBox3.Location = new Point(8, 172);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(33, 23);
-            textBox3.TabIndex = 9;
+            textBox4P.Location = new Point(101, 172);
+            textBox4P.Name = "textBox4P";
+            textBox4P.Size = new Size(39, 23);
+            textBox4P.TabIndex = 10;
             // 
-            // textBox2
+            // textBox3P
             // 
-            textBox2.Location = new Point(93, 76);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(27, 23);
-            textBox2.TabIndex = 8;
+            textBox3P.Location = new Point(8, 172);
+            textBox3P.Name = "textBox3P";
+            textBox3P.Size = new Size(33, 23);
+            textBox3P.TabIndex = 9;
             // 
-            // textBox1
+            // textBox2P
             // 
-            textBox1.Location = new Point(11, 74);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(30, 23);
-            textBox1.TabIndex = 7;
+            textBox2P.Location = new Point(93, 76);
+            textBox2P.Name = "textBox2P";
+            textBox2P.Size = new Size(27, 23);
+            textBox2P.TabIndex = 8;
+            // 
+            // textBox1P
+            // 
+            textBox1P.Location = new Point(11, 74);
+            textBox1P.Name = "textBox1P";
+            textBox1P.Size = new Size(30, 23);
+            textBox1P.TabIndex = 7;
             // 
             // label9
             // 
@@ -205,19 +217,18 @@
             // 
             // Transformaciones
             // 
-            Transformaciones.BackgroundImage = (Image)resources.GetObject("Transformaciones.BackgroundImage");
             Transformaciones.BackgroundImageLayout = ImageLayout.Stretch;
             Transformaciones.Controls.Add(button4);
             Transformaciones.Controls.Add(button3);
-            Transformaciones.Controls.Add(button2);
-            Transformaciones.Controls.Add(button1);
+            Transformaciones.Controls.Add(btnEscalamiento);
+            Transformaciones.Controls.Add(btnTraslacion);
             Transformaciones.Controls.Add(textBox12);
             Transformaciones.Controls.Add(comboBox1);
             Transformaciones.Controls.Add(textBox11);
-            Transformaciones.Controls.Add(textBox10);
-            Transformaciones.Controls.Add(textBox9);
-            Transformaciones.Controls.Add(textBox8);
-            Transformaciones.Controls.Add(textBox7);
+            Transformaciones.Controls.Add(textBox10E);
+            Transformaciones.Controls.Add(textBox9E);
+            Transformaciones.Controls.Add(textBox8T);
+            Transformaciones.Controls.Add(textBox7T);
             Transformaciones.Controls.Add(label14);
             Transformaciones.Controls.Add(label13);
             Transformaciones.Controls.Add(label12);
@@ -247,23 +258,25 @@
             button3.Text = "Rotación";
             button3.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnEscalamiento
             // 
-            button2.Location = new Point(110, 155);
-            button2.Name = "button2";
-            button2.Size = new Size(97, 23);
-            button2.TabIndex = 14;
-            button2.Text = "Escalamiento";
-            button2.UseVisualStyleBackColor = true;
+            btnEscalamiento.Location = new Point(110, 155);
+            btnEscalamiento.Name = "btnEscalamiento";
+            btnEscalamiento.Size = new Size(97, 23);
+            btnEscalamiento.TabIndex = 14;
+            btnEscalamiento.Text = "Escalamiento";
+            btnEscalamiento.UseVisualStyleBackColor = true;
+            btnEscalamiento.Click += btnEscalamiento_Click;
             // 
-            // button1
+            // btnTraslacion
             // 
-            button1.Location = new Point(110, 86);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 13;
-            button1.Text = "Traslación";
-            button1.UseVisualStyleBackColor = true;
+            btnTraslacion.Location = new Point(110, 86);
+            btnTraslacion.Name = "btnTraslacion";
+            btnTraslacion.Size = new Size(75, 23);
+            btnTraslacion.TabIndex = 13;
+            btnTraslacion.Text = "Traslación";
+            btnTraslacion.UseVisualStyleBackColor = true;
+            btnTraslacion.Click += btnTraslacion_Click;
             // 
             // textBox12
             // 
@@ -287,33 +300,33 @@
             textBox11.Size = new Size(27, 23);
             textBox11.TabIndex = 10;
             // 
-            // textBox10
+            // textBox10E
             // 
-            textBox10.Location = new Point(77, 155);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(27, 23);
-            textBox10.TabIndex = 9;
+            textBox10E.Location = new Point(77, 155);
+            textBox10E.Name = "textBox10E";
+            textBox10E.Size = new Size(27, 23);
+            textBox10E.TabIndex = 9;
             // 
-            // textBox9
+            // textBox9E
             // 
-            textBox9.Location = new Point(11, 153);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(27, 23);
-            textBox9.TabIndex = 8;
+            textBox9E.Location = new Point(11, 153);
+            textBox9E.Name = "textBox9E";
+            textBox9E.Size = new Size(27, 23);
+            textBox9E.TabIndex = 8;
             // 
-            // textBox8
+            // textBox8T
             // 
-            textBox8.Location = new Point(73, 86);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(31, 23);
-            textBox8.TabIndex = 7;
+            textBox8T.Location = new Point(73, 86);
+            textBox8T.Name = "textBox8T";
+            textBox8T.Size = new Size(31, 23);
+            textBox8T.TabIndex = 7;
             // 
-            // textBox7
+            // textBox7T
             // 
-            textBox7.Location = new Point(11, 86);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(28, 23);
-            textBox7.TabIndex = 6;
+            textBox7T.Location = new Point(11, 86);
+            textBox7T.Name = "textBox7T";
+            textBox7T.Size = new Size(28, 23);
+            textBox7T.TabIndex = 6;
             // 
             // label14
             // 
@@ -513,24 +526,24 @@
         private Label label10;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox textBox1P;
         private Label label15;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox textBox6P;
+        private TextBox textBox5P;
+        private TextBox textBox4P;
+        private TextBox textBox3P;
+        private TextBox textBox2P;
         private Button button4;
         private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnEscalamiento;
+        private Button btnTraslacion;
         private TextBox textBox12;
         private ComboBox comboBox1;
         private TextBox textBox11;
-        private TextBox textBox10;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
+        private TextBox textBox10E;
+        private TextBox textBox9E;
+        private TextBox textBox8T;
+        private TextBox textBox7T;
         private Button button5;
         private CheckBox checkBox4;
         private CheckBox checkBox3;
@@ -538,5 +551,6 @@
         private CheckBox checkBox1;
         private Button button6;
         private PictureBox plano;
+        private Button btnPoligono;
     }
 }
