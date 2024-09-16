@@ -45,13 +45,13 @@
             label4 = new Label();
             label1 = new Label();
             Transformaciones = new Panel();
-            button4 = new Button();
-            button3 = new Button();
+            btnSesgado = new Button();
+            btnRotacion = new Button();
             btnEscalamiento = new Button();
             btnTraslacion = new Button();
             textBox12 = new TextBox();
-            comboBox1 = new ComboBox();
-            textBox11 = new TextBox();
+            comboBoxSesgado = new ComboBox();
+            textBox11R = new TextBox();
             textBox10E = new TextBox();
             textBox9E = new TextBox();
             textBox8T = new TextBox();
@@ -218,13 +218,13 @@
             // Transformaciones
             // 
             Transformaciones.BackgroundImageLayout = ImageLayout.Stretch;
-            Transformaciones.Controls.Add(button4);
-            Transformaciones.Controls.Add(button3);
+            Transformaciones.Controls.Add(btnSesgado);
+            Transformaciones.Controls.Add(btnRotacion);
             Transformaciones.Controls.Add(btnEscalamiento);
             Transformaciones.Controls.Add(btnTraslacion);
             Transformaciones.Controls.Add(textBox12);
-            Transformaciones.Controls.Add(comboBox1);
-            Transformaciones.Controls.Add(textBox11);
+            Transformaciones.Controls.Add(comboBoxSesgado);
+            Transformaciones.Controls.Add(textBox11R);
             Transformaciones.Controls.Add(textBox10E);
             Transformaciones.Controls.Add(textBox9E);
             Transformaciones.Controls.Add(textBox8T);
@@ -240,23 +240,25 @@
             Transformaciones.Size = new Size(210, 344);
             Transformaciones.TabIndex = 1;
             // 
-            // button4
+            // btnSesgado
             // 
-            button4.Location = new Point(110, 258);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 16;
-            button4.Text = "Sesgado";
-            button4.UseVisualStyleBackColor = true;
+            btnSesgado.Location = new Point(110, 258);
+            btnSesgado.Name = "btnSesgado";
+            btnSesgado.Size = new Size(75, 23);
+            btnSesgado.TabIndex = 16;
+            btnSesgado.Text = "Sesgado";
+            btnSesgado.UseVisualStyleBackColor = true;
+            btnSesgado.Click += btnSesgado_Click;
             // 
-            // button3
+            // btnRotacion
             // 
-            button3.Location = new Point(110, 211);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 15;
-            button3.Text = "Rotación";
-            button3.UseVisualStyleBackColor = true;
+            btnRotacion.Location = new Point(110, 211);
+            btnRotacion.Name = "btnRotacion";
+            btnRotacion.Size = new Size(75, 23);
+            btnRotacion.TabIndex = 15;
+            btnRotacion.Text = "Rotación";
+            btnRotacion.UseVisualStyleBackColor = true;
+            btnRotacion.Click += btnRotacion_Click;
             // 
             // btnEscalamiento
             // 
@@ -285,20 +287,20 @@
             textBox12.Size = new Size(26, 23);
             textBox12.TabIndex = 12;
             // 
-            // comboBox1
+            // comboBoxSesgado
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(11, 259);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(48, 23);
-            comboBox1.TabIndex = 11;
+            comboBoxSesgado.FormattingEnabled = true;
+            comboBoxSesgado.Location = new Point(11, 259);
+            comboBoxSesgado.Name = "comboBoxSesgado";
+            comboBoxSesgado.Size = new Size(48, 23);
+            comboBoxSesgado.TabIndex = 11;
             // 
-            // textBox11
+            // textBox11R
             // 
-            textBox11.Location = new Point(58, 211);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(27, 23);
-            textBox11.TabIndex = 10;
+            textBox11R.Location = new Point(58, 211);
+            textBox11R.Name = "textBox11R";
+            textBox11R.Size = new Size(27, 23);
+            textBox11R.TabIndex = 10;
             // 
             // textBox10E
             // 
@@ -533,13 +535,13 @@
         private TextBox textBox4P;
         private TextBox textBox3P;
         private TextBox textBox2P;
-        private Button button4;
-        private Button button3;
+        private Button btnSesgado;
+        private Button btnRotacion;
         private Button btnEscalamiento;
         private Button btnTraslacion;
         private TextBox textBox12;
-        private ComboBox comboBox1;
-        private TextBox textBox11;
+        private ComboBox comboBoxSesgado;
+        private TextBox textBox11R;
         private TextBox textBox10E;
         private TextBox textBox9E;
         private TextBox textBox8T;
